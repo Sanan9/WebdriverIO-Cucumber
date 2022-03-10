@@ -17,4 +17,6 @@ module.exports = class Page {
      openGenuineKiaParts() {
         return browser.url('https://www.genuinekiaparts.com/')
     }
+    openAcademy(){return browser.url('https://www.academy.com/')
+   }
 }

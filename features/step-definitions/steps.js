@@ -7,6 +7,7 @@ const AutomationPracticePage = require("../pageobjects/automationpractice.page")
 const BladehqPage = require("../pageobjects/bladehq.page")
 const BestbuyPage = require("../pageobjects/bestbuy.page")  
 const GenuineKiaPartsPage = require("../pageobjects/genuinekiaparts.page")
+const AcademyPage = require("../pageobjects/academy.page")
 const pages = {
     login: LoginPage
 }
@@ -52,4 +53,8 @@ When(/^I open best buy website and sign in$/, async () => {
 When(/^I submit an email and password$/, async () => {
     await GenuineKiaPartsPage.open()
     await GenuineKiaPartsPage.createAccount()
+});
+When(/^I submit an email and password$/, async () => {
+    await AcademyPage.open()
+    await AcademyPage.clickbuttonSignIn3()
 });
