@@ -36,11 +36,11 @@ class AcademyPage extends Page {
         await this.buttonSignIn3.waitForClickable();
         await this.buttonSignIn3.click();
       } else {
-        await driver.hideKeyboard()
+        //await driver.hideKeyboard()
         
         
         //await this.buttonSignIn3.waitForClickable();
-        await driver.setImplicitWaitTimeout(5000);
+       // await driver.setImplicitWaitTimeout(5000);
         
         await this.buttonSignIn3.click() 
       }
