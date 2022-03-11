@@ -50,11 +50,11 @@ When(/^I open best buy website and sign in$/, async () => {
     await BestbuyPage.open()
     await BestbuyPage.clickbuttonSignIn2()
 }); 
-When(/^I submit an email and password$/, async () => {
+When(/^I submit an email and password$/, async () => {   // dont use same cucumber phrase for another step definitions!!!
     await GenuineKiaPartsPage.open()
     await GenuineKiaPartsPage.createAccount()
 });
-When(/^I submit an email and password$/, async () => {
+When(/^I submit an email and the password$/, async () => {
     await AcademyPage.open()
     await AcademyPage.clickbuttonSignIn3()
 });

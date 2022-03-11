@@ -16,7 +16,9 @@ class AcademyPage extends Page {
     get buttonSignIn2(){ return $('//a[@aria-label = "Sign In"]')}
     get inputEmail(){ return $('//input[@name= "signInData.email"]') }
     get inputPassword(){ return $('//input[@name= "signInData.password"]') }
-    get buttonSignIn3(){('//button[@data-testid= "signin-btn]') }
+    get buttonClose(){return $('//button[@aria-label="close promotion dialog"]')}
+    get buttonSignIn3(){ return $('//button[@data-testid="signin-btn"]') }
+    
 
     async clickbuttonSignIn3() {
       await this.buttonSignIn.waitForDisplayed();
@@ -28,8 +30,21 @@ class AcademyPage extends Page {
       await this.inputEmail.setValue('safety7@yahoo.com')
     
       await this.inputPassword.setValue('Sa0557600150#')
-     
-      await this.buttonSignIn3.click() 
+      await browser.pause(4000);
+      if (this.buttonClose.isExisting() === true) {
+        await this.buttonClose.click()
+        await this.buttonSignIn3.waitForClickable();
+        await this.buttonSignIn3.click();
+      } else {
+        await driver.hideKeyboard()
+        
+        
+        //await this.buttonSignIn3.waitForClickable();
+        await driver.setImplicitWaitTimeout(5000);
+        
+        await this.buttonSignIn3.click() 
+      }
+
       }
 
 
