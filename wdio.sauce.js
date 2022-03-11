@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './features/**/academy.feature'
+        './features/**/#.feature'
         ],
     // Patterns to exclude.
     exclude: [
@@ -56,16 +56,16 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'Chrome', 
-       // browserVersion: '15',
-        platformName: 'Android',
-        'appium:deviceName': 'Samsung Galaxy Tab S7 Plus GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
+        browserName: 'chrome', 
+        browserVersion: 'latest',
+        platformName: 'Windows 10',
+       // 'appium:deviceName': 'Samsung Galaxy Tab S7 Plus GoogleAPI Emulator',
+        //'appium:platformVersion': '12.0',
 
         //acceptInsecureCerts: true,
         'sauce:options': {
-            appiumVersion: '1.22.1'
-          //  screenResolution: '2048x1536'
+            //appiumVersion: '1.22.1'
+          screenResolution: '1920x1200'
         }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
